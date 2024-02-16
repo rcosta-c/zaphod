@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/28 17:20:44 by rcosta-c          #+#    #+#             */
-/*   Updated: 2024/01/28 17:34:29 by rcosta-c         ###   ########.fr       */
+/*   Created: 2024/01/24 15:36:49 by rcosta-c          #+#    #+#             */
+/*   Updated: 2024/01/24 16:50:57 by rcosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,10 @@ void	ft_putnbr(int nb)
 		rtfm(nb + 48);
 }
 /*
-int	main(void)
+#include <stdio.h>
+
+int	main()	
 {
-	ft_putnbr(42);
-} */
+        ft_putnbr(42);
+	return (0);
+}*/

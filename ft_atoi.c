@@ -1,36 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 15:34:52 by rcosta-c          #+#    #+#             */
-/*   Updated: 2024/01/24 16:19:43 by rcosta-c         ###   ########.fr       */
+/*   Created: 2024/01/24 15:38:58 by rcosta-c          #+#    #+#             */
+/*   Updated: 2024/01/24 16:27:04 by rcosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_strlen(char *str)
+int	ft_atoi(char *str)
 {
-	unsigned int	counter;
+	int	resultado;
+	int	sinal;
 
-	counter = 0;
-	while (str[counter] != '\0')
+	resultado = 0;
+	sinal = 1;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	while (*str == '-' || *str == '+')
 	{
-		counter++;
+		if (*str == '-')
+		{
+			sinal *= -1;
+		}
+		str++;
 	}
-	return (counter);
+	while (*str >= 48 && *str <= 57)
+	{
+		resultado *= 10;
+		resultado += *str - 48;
+		str++;
+	}
+	return (resultado * sinal);
 }
 /*
-#include <string.h>
 #include <stdio.h>
-int     main()
-{
-        char    *teste = "blabla";
 
-//	strcpy("letras", teste);
-        printf("the number of characters is %d \n",ft_strlen(teste));
-        return (0);
+int	main()
+{
+	char	*a;
+
+	a = " ---+--+1234ab567";
+	printf("%d\n", ft_atoi(a));
+	return (0);
+
 } */

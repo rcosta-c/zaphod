@@ -5,30 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcosta-c <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 09:31:05 by rcosta-c          #+#    #+#             */
-/*   Updated: 2024/01/16 12:07:20 by rcosta-c         ###   ########.fr       */
+/*   Created: 2024/01/24 15:35:09 by rcosta-c          #+#    #+#             */
+/*   Updated: 2024/01/24 16:24:30 by rcosta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <string.h>
 
 void	ft_putstr(char *str)
 {
-	unsigned int	r;
+	unsigned int	counter;
 
-	r = 0;
-	while (str[r] != '\0')
+	counter = 0;
+	while (str[counter] != '\0')
 	{
-		r++;
+		counter++;
 	}
-	write(1, str, r);
+	write(1, str, counter);
 }
-//int	main()
-//{
-//	char	str[5];
-//
-//	strcpy(str, "a5ir");
-//	ft_putstr(str);
-//	return (0);
-//}
+/*
+int     main()
+{
+        char    a[] = "OleOleOle";
+      strcpy(str, "Ole!Ole!");
+        ft_putstr(a);
+        return (0);
+} */
